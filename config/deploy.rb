@@ -2,10 +2,11 @@
 
 lock '3.14.1'
 
-server 'oppelt.ru', port: 2222, roles: %w(app db web), primary: true
+# server 'oppelt.ru', port: 2222, roles: %w(app db web), primary: true
+server '178.217.99.133', port: 2222, roles: %w(app db web), primary: true
 
 set :rbenv_ruby,      '2.6.3'
-set :application,     'price'
+set :application,     'oppelt'
 set :repo_url,        'git@github.com:dpr0/oppelt.git'
 set :deploy_user,     'deploy'
 set :linked_files,    fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/master.key', 'config/credentials.yml.enc', '.env')

@@ -1,5 +1,5 @@
 {
-  "name": "price",
+  "name": "oppelt",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.3",
