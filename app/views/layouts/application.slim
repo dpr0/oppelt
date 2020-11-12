@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta name="yandex-verification" content="3b8da4df5453a114"
+    = csrf_meta_tags
+    = csp_meta_tag
+    link href="/public/favicon.ico" rel=('shortcut icon') type="image/x-icon"
+    title oppelt.ru
+
+    = stylesheet_pack_tag 'application', media: 'all'
+    = javascript_pack_tag 'application'
+  body style="background-color: rgba(22,22,22,1)"
+    nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+      .container
+        = link_to 'OPPELT.RU', root_path, class: 'nav-brand js-scroll-trigger'
+        button.navbar-toggler.navbar-toggler-right aria-controls="navbarResponsive" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarResponsive" data-toggle="collapse" type="button"
+          | Menu
+          i.fas.fa-bars
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              .notice = notice
+              .alert = alert
+            li.nav-item
+
+    / - if (request.user_agent =~ /Mobile/) == nil
+
+    = yield
+
+  footer.bg-black.small.text-center.text-white-50
+    section.contact-section.bg-black
+      .container
+        .social.d-flex.justify-content-center
+        | Copyright &copy; krsz.ru 2015-#{Time.now.year}
