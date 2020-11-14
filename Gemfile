@@ -14,7 +14,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'listen'
 gem 'dotenv-rails'
-gem 'puma'
+gem 'puma', '4.3.6'
 
 group :development do
   gem 'byebug'

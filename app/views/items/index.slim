@@ -1,7 +1,28 @@
-section#section1.signup-section.bg-black.text-center
-  .container
+/! Header
+header.masthead
+  .container.d-flex.h-100.align-items-center
+    .mx-auto.text-center
+      .container
+        .row
+          .col-lg-12.mx-auto
+            .row.align-items-center
+              .col-12.text-center
+                div id="top"
+                  a tabindex="-1" data-target="#myModal" data-toggle="modal"
+                    p.text-white-50 CLICK ME
 
+div.modal.fade#myModal tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  div.modal-dialog role="document"
+  div.modal-content#modal_content
+    .col-12.text-center
+      H1 REMEMBER - ELEVEN!!!
+    .col-12.text-center
+      p = image_tag "passport.jpg", size: "600x400"
+  div.modal-footer
+    button type="button" class="btn btn-default" data-dismiss="modal" Close
 
-section.about-section.bg-black.text-center
-  .container
-    .row
+javascript:
+    $(document).ready(function () {
+        $('#top').find('a').trigger('click');
+    });
+
