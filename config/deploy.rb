@@ -2,8 +2,7 @@
 
 lock '3.14.1'
 
-# server 'oppelt.ru', port: 2222, roles: %w(app db web), primary: true
-server '178.217.99.133', port: 2222, roles: %w(app db web), primary: true
+server 'oppelt.ru', port: 2222, roles: %w(app db web), primary: true
 
 set :rbenv_ruby,      '2.6.3'
 set :application,     'oppelt'
@@ -11,13 +10,11 @@ set :repo_url,        'git@github.com:dpr0/oppelt.git'
 set :deploy_user,     'deploy'
 set :linked_files,    fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/master.key', 'config/credentials.yml.enc', '.env')
 set :linked_dirs,     fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
-set :keep_releases,   5
+set :keep_releases,   1
 set :user,            'deploy'
 set :use_sudo,        false
 set :stage,           :production
 set :deploy_to,       "/home/#{fetch(:user)}/#{fetch(:application)}"
-set :ssh_options,     forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub)
-
 set :ssh_options, {
   user: 'deploy',
   keys: '~/.ssh/id_rsa',
