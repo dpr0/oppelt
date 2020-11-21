@@ -5,12 +5,11 @@ ruby '2.6.3'
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'activerecord-import'
 gem 'bootsnap'
-gem 'pg'
 gem 'rails'
 gem 'slim-rails'
 gem 'uglifier'
+gem 'sqlite3'
 gem 'webpacker'
 gem 'listen'
 gem 'dotenv-rails'
