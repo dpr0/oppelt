@@ -1,6 +1,7 @@
 default: &default
   adapter: sqlite3
   dbfile: db/test.db
+  database: <%= ENV['DB_NAME'] %>
 
 development:
   <<: *default
