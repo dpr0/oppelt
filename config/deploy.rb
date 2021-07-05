@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-lock '3.15.0'
+lock '3.16.0'
 
 server 'oppelt.ru', port: 2222, roles: %w(app db web), primary: true
 
-set :rbenv_ruby,      '3.0.0'
+set :rbenv_ruby,      '3.0.1'
 set :application,     'oppelt'
 set :repo_url,        'git@github.com:dpr0/oppelt.git'
 set :deploy_user,     'deploy'
